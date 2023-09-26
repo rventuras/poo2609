@@ -1,0 +1,74 @@
+package ex12609;
+
+import java.util.Scanner;
+
+import conteudoadd.addcont;
+
+public class passagem {
+
+	public static void main(String[] args) {
+		
+		addcont psx = new addcont();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Insira suas informações: ");
+		System.out.print("\nNome: ");
+		psx.nome = sc.nextLine();
+		System.out.print("\nTelefone: ");
+		psx.telefone = sc.nextLine();
+		System.out.print("\nEndereço: ");
+		psx.end = sc.nextLine();
+		System.out.print("\nDestino: ");
+		psx.local_viagem = sc.nextLine();
+		System.out.print("\nValor: ");
+		psx.preco = sc.nextDouble();
+		System.out.print("\nQuantidade; ");
+		psx.quantidade = sc.nextInt();
+		
+		System.out.println("==================");
+		System.out.println(psx);
+		System.out.println("==================");
+		
+		sc.close();
+	}
+
+}
+========================================
+
+package conteudoadd;
+
+public class addcont {
+	
+	public String nome;
+	public String telefone;
+	public String end;
+	public String local_viagem;
+	public double preco;
+	public int quantidade;
+	
+	public double total() { 
+		return preco * quantidade;
+	}
+	
+	public void addPassagem(int quantidade) {
+		this.quantidade = this.quantidade + quantidade;
+	}
+	
+	public void removePassagem(int quantidade) {
+		this.quantidade = this.quantidade - quantidade;
+	}
+	
+	public String toString() {
+		return "Nome: " + nome
+				+ "\nTelefone: " + telefone
+				+ "\nEndereço: " + end
+				+ "\nDestino: " + local_viagem
+				+ "\nValor da passagem: " + preco
+				+ "\nQuantidade: " + quantidade
+				+ "\nValor Total: " + total();
+	}
+	
+	
+	
+
+}
