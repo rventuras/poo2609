@@ -1,0 +1,106 @@
+package aplicacao;
+
+import entidade.tv_a1;
+import entidade.tv_abc;
+import entidade.tv_c137;
+
+public class programa {
+
+	public static void main(String[] args) {
+		tv_a1 tv1 = new tv_a1();
+		tv_c137 tv2 = new tv_c137();
+		tv_abc tv3 = new tv_abc();
+		
+		tv1.desligar();
+		System.out.println(tv1);
+		
+		tv2.ligar();
+		System.out.println("\n" + tv2);
+		
+		tv3.ligar();
+		System.out.println("\n" + tv3);
+
+	}
+
+}
+================================================================
+
+package entidade;
+
+public class tv_a1 {
+	public String modelo = "A1 Samsung"; 
+	public String cor = "Black";
+	public float tamanho = 32f;
+	public boolean energia;
+	
+	public void ligar() {
+		this.energia = true;
+	}
+	
+	public void desligar() {
+		this.energia = false;
+	}
+	
+	public String toString() {
+		return "Modelo: " + modelo
+				+ "\nCor: " + cor
+				+ "\nPolegadas: " + tamanho
+				+ "\nEstado: " + energia;
+	}
+}
+
+================================
+
+package entidade;
+
+public class tv_c137 {
+public String modelo = "C137_LG";
+public String cor = "Black Piano";
+public Float tamanho = 55f;
+public boolean energia;
+
+
+public void ligar() {
+	this.energia = true;
+}
+
+public void desligar() {
+	this.energia = false;
+}
+
+public String toString() {
+	return "Modelo: " + modelo
+			+ "\nCor: " + cor
+			+ "\nPolegadas: " + tamanho
+			+ "\nEstado: " + energia;
+
+}
+}
+
+====================================
+
+package entidade;
+
+public class tv_abc {
+	public String modelo = "tv_Abc";
+	public String cor = "Red";
+	public Float tamanho = 42f;
+	public boolean energia;
+	
+	public void ligar() {
+		this.energia = true;
+	}
+	
+	public void desligar() {
+		this.energia = false;
+	}
+
+	public String toString() {
+		return "Modelo: " + modelo
+				+ "\nCor: " + cor
+				+ "\nPolegadas: " + tamanho
+				+ "\nEstado: " + energia;
+
+	}
+
+}
